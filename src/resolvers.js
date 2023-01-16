@@ -44,6 +44,13 @@ const resolvers = {
     modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getTrackModules(id);
     },
+
+    // these match the field names. Like we're customizing Track object's results
+    durationInSeconds: ({ length }) => length,
+  },
+  Module: {
+    // these match the field names. Like we're customizing Track object's results
+    durationInSeconds: ({ length }) => length,
   },
 };
 
